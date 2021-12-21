@@ -7,19 +7,25 @@
     <title>Assignment-1</title>
     <script>
         let users = [
-            {"name":"Jawwad"},
-            {"name":"khan"},
-            {"name":"JK"},
-            {"name":"arbaz"},
-            {"name":"ilyas"}
+            {name:"Jawwad"},
+            {name:"khan"},
+            {name:"JK"},
+            {name:"arbaz"},
+            {name:"ilyas"}
         ]
 
+         
+
         //map to add marks
-        let userResult = users.map(vals=>{
+       
+            let userResult = users.map(vals=>{
             vals.marks = Math.round(Math.random()*100);
             return vals;
         })
         console.log("users==>",userResult);
+
+        
+       
 
         //filter students
         let filteredStd = userResult.filter(items=>{
@@ -36,8 +42,18 @@
         
 
     </script>
+    <style>
+        body{
+            border:"4px solid black";
+            height: 20rem;
+            width: 30rem;
+        }
+    </style>
 </head>
 <body>
-    
+    <h2>
+        Inspect
+    </h2>
+
 </body>
 </html>
