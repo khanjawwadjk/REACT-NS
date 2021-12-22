@@ -40,20 +40,34 @@ getTableData();
     function appendTableData(data1){
         console.log("table data1===>",data1);
         
-        var temp="";
-        for(var data in data1){
-            temp += "<tr>";
-            temp += `<td> ${data.id} </td>`;
-            temp += "<td>" +data.name+ "</td>";
-            temp += "<td>" +data.email+ "</td>";
-            temp += "<td>" +data.username+ "</td>";
-            temp += "<td>" +data.phone+ "</td>";
-            temp += "<td>" +data.website+ "</td>";
-            temp += "</tr>"
+        // var temp="";
+        // for(var items in data1){
+        //     temp += "<tr>";
+        //     temp += `<td> ${items.id} </td>`;
+        //     temp += "<td>" +items.name+ "</td>";
+        //     temp += "<td>" +items.email+ "</td>";
+        //     temp += "<td>" +items.username+ "</td>";
+        //     temp += "<td>" +items.phone+ "</td>";
+        //     temp += "<td>" +items.website+ "</td>";
+        //     temp += "</tr>"
             
-        }
-        let mainDiv = document.getElementById("tableBody");
-        mainDiv.innerHTML = temp;
+        // }
+        // let mainDiv = document.getElementById("tableBody");
+        // mainDiv.innerHTML = temp;
+
+        let temp='';
+        data1.forEach(vals => {
+            let tableData = `<tr>
+                             <td>${vals.id}</td>
+                             <td>${vals.name}</td>
+                             <td>${vals.email}</td>
+                             <td>${vals.username}</td>
+                             <td>${vals.phone}</td>
+                             <td>${vals.website}</td>`;
+            temp += tableData;
+        });
+        let addTableBody = document.getElementById("tableBody");
+        addTableBody.innerHTML = temp;
 
 
     
